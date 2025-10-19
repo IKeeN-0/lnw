@@ -12,14 +12,21 @@ body{
     filter: drop-shadow(gray 3px 3px 3px);
 }
 
-.Number{
+.display{
     margin: 5% auto;
     width: 90%;
     background-color: rgb(245, 245, 245);
     height: 55px;
     border-radius: 10px;
-    border: 1px solid gray;   
+    border: 1px solid gray;
+    font-size: 25px;
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางตามแนวตั้ง */
+    justify-content: flex-end; /* จัดให้อยู่ชิดขวา */
+    padding-right: 10px;
 }
+
+
 
 button{
     width: 50px;
