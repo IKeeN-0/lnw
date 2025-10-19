@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(164, 255, 255);
+    font-family:sans-serif;
+}
+
+.Outside{
+    border: solid 3px black;
+    background-color: rgba(164, 67, 255, 0.481);
+    padding: 10px 0 10px 10px;
+    margin: 4%;
+    transition: background-color 0.3s;
+}
+
+.Inside{
+    border: solid 3px rgb(84, 84, 84);
+    background-color: rgba(255, 151, 252, 0.416);
+    padding: 10px 50px 10px 10px;
+    margin: 3%;
+    transition: background-color 0.3s;
+}
+
+.button{
+    background-color: rgb(255, 222, 104);
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    margin: 0 auto 0 auto;
+}
+
+.OutsideClick{
+    background-color: rgb(164, 67, 255);
+}
+
+.InsideClick{
+    background-color: rgb(255, 151, 252);
+}
+
+div:hover{
+    cursor: pointer;
+}

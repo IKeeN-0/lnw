@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab 1-2</title>
+        <style>
+            input[type="radio"]:checked {
+                accent-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Create an account</h1>
+        </header>
+        <main>
+            <section>   
+                <p>It's free and always will be.</p>
+                <p>
+                    <input type="text" placeholder="Firstname">
+                    <input type="text" placeholder="Surname">
+                </p>
+                <p><input type="email" placeholder="Email address"></p>
+                <p><input type="password" placeholder="New password"></p>
+            </section>
+            <section>
+                <p>Birthday</p>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+                <select>
+                    <option>January</option>
+                    <option>February</option>
+                </select>
+                <select>
+                    <option>2019</option>
+                    <option>2020</option>
+                </select>
+            </section>
+            <section>
+                <p class="pink">
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                </p>
+            </section>
+            <section>
+                <button type="button">Sign up</button>
+            </section>
+        </main>
+    </body>
+</html>

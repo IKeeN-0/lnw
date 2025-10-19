@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1-1</title>
+    <link rel="stylesheet" type="text/css" href="Lab1-1.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th></th>
+            <th>สโมสร</th>
+            <th>แข่ง</th>
+            <th>ชนะ</th>
+            <th>เสมอ</th>
+            <th>แพ้</th>
+            <th>ได้</th>
+            <th>เสีย</th>
+            <th>ต่าง</th>
+            <th>แต้ม</th>
+            <th>5 นัดล่าสุด</th>
+        </tr>
+        <tr>
+            <td class="top4"></td>
+            <td>
+                <span class="rank">1</span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/1200px-Arsenal_FC.svg.png">
+                <span class="team-name">อาร์เซนอล</span>
+            </td>
+            <td>19</td>
+            <td>16</td>
+            <td>2</td>
+            <td>1</td>
+            <td>45</td>
+            <td>16</td>
+            <td>29</td>
+            <td>50</td>
+            <td>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="top4"></td>
+            <td>
+                <span class="rank"">2</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE44aHQEjepFxdourWU4rWwHZPLrIa-JhEKQ&s">
+                <span class="team-name">แมนซิตี</span>
+            </td>
+            <td>20</td>
+            <td>14</td>
+            <td>3</td>
+            <td>3</td>
+            <td>53</td>
+            <td>20</td>
+            <td>33</td>
+            <td>45</td>
+            <td>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="top4"></td>
+            <td>
+                <span class="rank"">3</span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/1200px-Newcastle_United_Logo.svg.png">
+                <span class="team-name">นิวคาสเซิล</span>
+            </td>
+            <td>20</td>
+            <td>10</td>
+            <td>9</td>
+            <td>1</td>
+            <td>33</td>
+            <td>11</td>
+            <td>22</td>
+            <td>39</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="top4"></td>
+            <td>
+                <span class="rank"">4</span>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1200px-Manchester_United_FC_crest.svg.png">
+                <span class="team-name">แมนยู</span>
+            </td>
+            <td>20</td>
+            <td>12</td>
+            <td>3</td>
+            <td>5</td>
+            <td>32</td>
+            <td>25</td>
+            <td>7</td>
+            <td>39</td>
+            <td>
+                <span class="dot red"></span>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="top5"></td>
+            <td>
+                <span class="rank"">5</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/6/6d/Tottenham_Hotspur.png">
+                <span class="team-name">สเปอร์ส</span>
+            </td>
+            <td>21</td>
+            <td>11</td>
+            <td>3</td>
+            <td>7</td>
+            <td>40</td>
+            <td>31</td>
+            <td>9</td>
+            <td>36</td>
+            <td>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">6</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/1200px-Brighton_%26_Hove_Albion_logo.svg.png">
+                <span class="team-name">ไบร์ทตัน</span>
+            </td>
+            <td>19</td>
+            <td>9</td>
+            <td>4</td>
+            <td>6</td>
+            <td>37</td>
+            <td>27</td>
+            <td>10</td>
+            <td>31</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">7</span>
+                <img src="https://cambodianfootball.com/upload/catalog/c/976/m_fulham-football-club.png">
+                <span class="team-name">ฟูลัม</span>
+            </td>
+            <td>21</td>
+            <td>9</td>
+            <td>4</td>
+            <td>8</td>
+            <td>32</td>
+            <td>30</td>
+            <td>2</td>
+            <td>31</td>
+            <td>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">8</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/2/2a/Brentford_FC_crest.svg/1200px-Brentford_FC_crest.svg.png">
+                <span class="team-name">เบรนท์ฟอร์ด</span>
+            </td>
+            <td>20</td>
+            <td>7</td>
+            <td>9</td>
+            <td>4</td>
+            <td>32</td>
+            <td>28</td>
+            <td>4</td>
+            <td>30</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">9</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/d/d1/Liverpool_FC_Logo.svg/1200px-Liverpool_FC_Logo.svg.png">
+                <span class="team-name">ลิเวอร์พูล</span>
+            </td>
+            <td>19</td>
+            <td>8</td>
+            <td>5</td>
+            <td>6</td>
+            <td>34</td>
+            <td>25</td>
+            <td>9</td>
+            <td>29</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">10</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQesNybU6oN9w4uoKGBxco8FrjCUB5tfTI9Sg&s">
+                <span class="team-name">เชลซี</span>
+            </td>
+            <td>20</td>
+            <td>8</td>
+            <td>5</td>
+            <td>7</td>
+            <td>22</td>
+            <td>21</td>
+            <td>1</td>
+            <td>29</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">11</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/5/57/Aston_Villa.png">
+                <span class="team-name">แอสตันวิลลา</span>
+            </td>
+            <td>20</td>
+            <td>8</td>
+            <td>4</td>
+            <td>8</td>
+            <td>23</td>
+            <td>27</td>
+            <td>-4</td>
+            <td>28</td>
+            <td>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">12</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/0/0c/Crystal_Palace_FC_logo.svg/175px-Crystal_Palace_FC_logo.svg.png">
+                <span class="team-name">คริสตัลพาเลซ</span>
+            </td>
+            <td>20</td>
+            <td>6</td>
+            <td>6</td>
+            <td>8</td>
+            <td>18</td>
+            <td>27</td>
+            <td>-9</td>
+            <td>24</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">13</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyCj2dxrNqPa2Tv_32tijqMe-GjwNK3i68LA&s">
+                <span class="team-name">ฟอเรสต์</span>
+            </td>
+            <td>20</td>
+            <td>5</td>
+            <td>6</td>
+            <td>9</td>
+            <td>16</td>
+            <td>35</td>
+            <td>-19</td>
+            <td>21</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">14</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/6/63/Leicester02.png">
+                <span class="team-name">เลสเตอร์</span>
+            </td>
+            <td>20</td>
+            <td>5</td>
+            <td>3</td>
+            <td>12</td>
+            <td>28</td>
+            <td>35</td>
+            <td>-7</td>
+            <td>18</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">15</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/5/54/Leeds_United_F.C._logo.svg/640px-Leeds_United_F.C._logo.svg.png">
+                <span class="team-name">ลีดส์</span>
+            </td>
+            <td>19</td>
+            <td>4</td>
+            <td>6</td>
+            <td>9</td>
+            <td>26</td>
+            <td>33</td>
+            <td>-7</td>
+            <td>18</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot grey"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">16</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/c/c2/West_Ham_United_FC_logo.svg/1200px-West_Ham_United_FC_logo.svg.png">
+                <span class="team-name">เวสต์แฮม</span>
+            </td>
+            <td>20</td>
+            <td>5</td>
+            <td>3</td>
+            <td>12</td>
+            <td>17</td>
+            <td>25</td>
+            <td>-8</td>
+            <td>18</td>
+            <td>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="none"></td>
+            <td>
+                <span class="rank"">17</span>
+                <img src="https://football.kapook.com/uploads/logo/WOLVERHAMPTON.png">
+                <span class="team-name">วูล์ฟแฮมป์ตัน</span>
+            </td>
+            <td>20</td>
+            <td>4</td>
+            <td>5</td>
+            <td>11</td>
+            <td>12</td>
+            <td>30</td>
+            <td>-18</td>
+            <td>17</td>
+            <td>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="loss"></td>
+            <td>
+                <span class="rank"">18</span>
+                <img src="https://upload.wikimedia.org/wikipedia/th/thumb/e/e5/AFC_Bournemouth_%282013%29.svg/1200px-AFC_Bournemouth_%282013%29.svg.png">
+                <span class="team-name">บอร์นมัธ</span>
+            </td>
+            <td>20</td>
+            <td>4</td>
+            <td>5</td>
+            <td>11</td>
+            <td>19</td>
+            <td>42</td>
+            <td>-23</td>
+            <td>17</td>
+            <td>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="loss"></td>
+            <td>
+                <span class="rank"">19</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5KFkHM3ElfiHbb10So_HZJ2H7_224Q00ggQ&s">
+                <span class="team-name">เอฟเวอร์ตัน</span>
+            </td>
+            <td>20</td>
+            <td>3</td>
+            <td>6</td>
+            <td>11</td>
+            <td>15</td>
+            <td>28</td>
+            <td>-13</td>
+            <td>15</td>
+            <td>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot grey"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="loss"></td>
+            <td>
+                <span class="rank"">20</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBvMRkpMnUcsZ0vAow9mJYoiHBy7ZLOmAguQ&s">
+                <span class="team-name">เซาแธมป์ตัน</span>
+            </td>
+            <td>20</td>
+            <td>4</td>
+            <td>3</td>
+            <td>13</td>
+            <td>17</td>
+            <td>35</td>
+            <td>-18</td>
+            <td>15</td>
+            <td>
+                <span class="dot red"></span>
+                <span class="dot green"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+                <span class="dot red"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
