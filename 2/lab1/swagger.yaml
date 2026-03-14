@@ -1,0 +1,162 @@
+openapi: 3.1.0  
+info: 
+  title: Book Management Sysyem API
+  description: API สำหรับจัดการสต็อกสินค้าและรายการหนังสือที่มีขาย
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+    description: Local Development Server
+
+paths: 
+  /books:
+    get:
+      summary: ดึงรายการหนังสือทั้งหมดแบบสรุป
+      description: ส่งรายการหนังสือทั้งหมดคืน สามารถค้นหาชื่อหนังสือหรือเรียงตามลำดับราคาหรือชื่อหนังสือ
+      parameters:
+        - name: name
+          in: query
+          required: false
+          description: ค้นหาชื่อหนังสือ (บางส่วน)
+          schema:
+            type: string
+          example: "The Hobbit"
+        - name: sortBy
+          in: query
+          required: false
+          description: เรียงลำดับฟิลด์ที่ต้องการ เช่น price, name
+          schema:
+            type: string
+            enum: [name, price]
+          example: "price"
+        - name: order
+          in: query
+          required: false
+          description: รูปแบบการเรียงลำดับการแสดงผล (asc = น้อยไปมาก, desc = มากไปน้อย)
+          schema:
+            type: string
+            enum: [asc, desc]
+          default: asc
+      responses:
+        '200':  #OK
+          description: สำเร็จ
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BookSummary'
+
+    post:
+      summary: เพิ่มหนังสือเล่มใหม่
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookInput'
+      responses:
+        '201':   #created complete
+          description: สร้างหนังสือใหม่สำเร็จ
+        '400':  #cllient error
+          description: ข้อมูลไม่ครบถ้วน (ลืมใส่ชื่อหรือราคา)
+
+  /books/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        description: รหัส ID ของหนังสือ
+        schema:
+          type: integer
+
+    get:
+      summary: ดูรายละเอียดของหนังสือที่สนใจ
+      responses:
+        '200':   #OK
+          description: พบข้อมูลของหนังสือ
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BookFull'
+        '404':  #Not found
+          description: ไม่พบหนังสือรหัสนี้ในระบบ
+
+    put:
+      summary: แก้ไขข้อมูลของหนังสือ
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BookInput'
+      responses:
+        '200':  #OK
+          description: อัปเดตข้อมูลสำเร็จ
+        '404':  #Not found
+          description: ไม่พบหนังสือที่ต้องการแก้ไข
+    
+    delete:
+      summary: ลบหนังสือออกจากระบบ
+      responses:
+        '204':  #delete complete
+          description: ลบข้อมูลสำเร็จ
+        '404':  #Not found
+          description: ไม่พบหนังสือที่ต้องการลบ
+
+components:
+  schemas:
+    BookSummary:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: "A Court of Thorns and Roses"
+        genres:
+          type: string
+          example: "Fantasy"
+        priceDisplay:
+          type: string
+          example: "฿360"
+
+    BookFull:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        genres:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+      example:
+        id: 1
+        name: "A Court of Thorns and Roses"
+        genres: "Fantasy"
+        price: 360
+        stock: 10
+
+    BookInput:
+      type: object
+      required:
+        - name
+        - price
+      properties:
+        name:
+          type: string
+        genres:
+          type: string
+        price:
+          type: number
+        stock:
+          type: integer
+      example:
+        name: "Happy Place"
+        genres: "Romance"
+        price: 570
+        stock: 7

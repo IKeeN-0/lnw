@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package crypto;
+
+service CryptoService {
+  rpc StreamPrices (Empty) returns (stream PriceUpdate) {}
+}
+
+message Empty {}
+
+message PriceUpdate {
+  string symbol = 1;
+  float value = 2;
+  string timestamp = 3;
+}
