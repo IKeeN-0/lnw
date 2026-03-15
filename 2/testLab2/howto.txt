@@ -1,0 +1,30 @@
+gRPC install
+1. ติดตั้ง
+npm install @grpc/grpc-js @grpc/proto-loader
+2. ทำไฟล์ .proto
+
+
+rpc
+1. ติดตั้ง 
+npm install jayson
+
+
+json
+1. npm install express jsonapi-serializer
+2. โครงสร้างไฟล์
+├── server.js
+├── serializers/
+│   └── user.serializer.js
+└── package.json
+3. รันด้วย 
+node server.js
+
+
+.proto
+1. ระบุเวอร์ชันที่ใช้ (แนะนำ proto3 เพราะเป็นมาตรฐานปัจจุบัน)
+2. กำหนด Package เพื่อป้องกันชื่อซ้ำ
+3. นิยาม Service (เหมือนการรวบรวม Endpoint ของ API)
+// rpc [ชื่อฟังก์ชัน] ([ข้อมูลที่ส่งไป]) returns ([ข้อมูลที่ตอบกลับ]);
+  rpc GetToy (ToyRequest) returns (ToyResponse);
+  rpc CreateToy (ToyInput) returns (ToyResponse);
+4. นิยาม Message (โครงสร้างข้อมูล)
