@@ -9,11 +9,11 @@ servers:
     description: Local Development Server
 
 paths:  #API
-  /toys:
-    get:
-      summary: ดึงรายการของเล่นทั้งหมด (สรุป)
-      description: ส่งคืนรายการของเล่นในรูปแบบย่อ พร้อมราคาที่จัดรูปแบบแล้ว (priceDisplay)
-      responses:
+  /toys:  #path API
+    get:  #method
+      summary: ดึงรายการของเล่นทั้งหมด (สรุป) #ชื่อเรียกสั้นๆ
+      description: ส่งคืนรายการของเล่นในรูปแบบย่อ พร้อมราคาที่จัดรูปแบบแล้ว (priceDisplay) #คำอธิบาย
+      responses: #สิ่งที่ API จะตอบกลับ
         '200':
           description: สำเร็จ
           content:
@@ -75,14 +75,14 @@ paths:  #API
         '404':
           description: ไม่พบของเล่นที่ต้องการลบ
 
-components: #Schema
+components: #Schema เขียนแยกเพื่อไม่ให้โค้ดในส่วน paths ยาวเกินไป
   schemas:
     ToySummary:
-      type: object
-      properties:
+      type: object  #ระบุประเภทข้อมูล
+      properties:   #ระบุว่าใน Object นั้นมี Field อะไรบ้าง
         id:
-          type: integer
-          example: 1
+          type: integer   #ระบุประเภทข้อมูล
+          example: 1      #ใส่ตัวอย่างข้อมูลเพื่อให้ Swagger UI แสดงตัวอย่างง่ายขึ้น
         name:
           type: string
           example: "Robot X"
@@ -115,7 +115,7 @@ components: #Schema
 
     ToyInput:
       type: object
-      required:
+      required:   # เพื่อบอกว่าถ้าไม่ส่ง 2 ค่านี้มา API จะทำงานไม่ได้
         - name
         - price
       properties:
