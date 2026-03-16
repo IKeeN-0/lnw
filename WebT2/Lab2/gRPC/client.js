@@ -12,8 +12,8 @@ const client = new cryptoProto.CryptoService(
 );
 
 console.log("\n--- Starting Server Streaming ---");
-const call = client.streamPrices({});
-call.on('data', (response) => {
+const call = client.streamPrices({});               // Client ทำการเรียกฟังก์ชัน streamPrices ไปยัง Server โดยส่ง Object ว่าง {}
+call.on('data', (response) => {                     // Event Listener ที่จะทำงาน ทุกครั้ง ที่ Server ยิงข้อมูลใหม่มา
     console.log(`Current BTC Price: $${response.value.toFixed(2)}`);
 });
 

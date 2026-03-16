@@ -39,9 +39,9 @@ app.get('/books', (req, res) =>{
             let valB = b[sortBy];
             
             if (order === 'desc'){
-                return valA < valB ? 1 : -1;
+                return valA < valB ? 1 : -1;        // ถ้าคืนค่า 1 : จะสลับตำแหน่ง b อยู่ก่อน a
             } else {
-                return valA > valB ? 1 : -1;
+                return valA > valB ? 1 : -1;        // ถ้าคืนค่า -1 จะคงตำแหน่งเดิมไว้ a อยู่ก่อน
             }
         });
     }

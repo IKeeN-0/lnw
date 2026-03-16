@@ -9,18 +9,18 @@ const cryptoProto = grpc.loadPackageDefinition(packageDefinition).crypto;
 function streamPrices(call) {
     console.log("Client connected. Starting price stream...");
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {                        // สั่งให้ทำงานทุกๆ 500 มิลลิวินาที
         const priceUpdate = {
             symbol: "BTC",
             value: parseFloat((Math.random() * (50000 - 45000) + 45000).toFixed(2)),
             timestamp: new Date().toLocaleTimeString()
         };
 
-        call.write(priceUpdate);
+        call.write(priceUpdate);                // ส่งข้อมูลนี้ผ่านท่อ gRPC ออกไปหา Client ทันที
     }, 500);
 
-    call.on('cancelled', () => {
-        clearInterval(interval);
+    call.on('cancelled', () => {                // เมื่อ Client ตัดการเชื่อมต่อ
+        clearInterval(interval);                // หยุดการรัน Loop สุ่มราคา
         console.log("Client disconnected.");
     });
 }

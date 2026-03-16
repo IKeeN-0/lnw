@@ -19,7 +19,7 @@ app.get('/api/books/:id', (req, res) => {
 
     const jsonApiData = BookSerializer.serialize(book);
   
-    res.set('Content-Type', 'application/vnd.api+json');
+    res.set('Content-Type', 'application/vnd.api+json');                                // กำหนด Header ของ Response ให้ถูกต้องตามมาตรฐาน JSON:API
     res.send(jsonApiData);
 });
 

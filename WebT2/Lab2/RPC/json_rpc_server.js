@@ -1,11 +1,11 @@
 const jayson = require('jayson');
 
 const server = jayson.server({
-  toggleSmartLight: function(args, callback) {
+  toggleSmartLight: function(args, callback) {      // callback: คือฟังก์ชันที่ใช้ส่งคำตอบกลับไปหา Client โดยมีรูปแบบคือ callback(error, result)
     const roomName = args[0];
     const brightness = args[1];
 
-    callback(null, `Light in ${roomName} set to ${brightness}%`);
+    callback(null, `Light in ${roomName} set to ${brightness}%`);     // null = ไม่มีข้อผิดพลาด
   }
 });
 
