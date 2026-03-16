@@ -1,7 +1,8 @@
 Lib for NodeJS
 
--npm i express
--npm install swagger-ui-express
--npm install dotenv
--npm install cors
-
+<ul>
+  <li>npm i express</li>
+  <li>npm install swagger-ui-express</li>
+  <li>npm install dotenv</li>
+  <li>npm install cors</li>
+</ul>
