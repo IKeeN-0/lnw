@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Author {
+  id    Int    @id @default(autoincrement())    // เป็น Primary Key และเพิ่มค่าอัตโนมัติ
+  name  String
+  bio   String?       // เครื่องหมาย ? หมายถึงเป็นค่าว่างได้
+  books Book[]        // ความสัมพันธ์ One-to-Many
+}
+
+model Book {
+  id        Int    @id @default(autoincrement())
+  title     String
+  published Boolean @default(false)               // ค่าเริ่มต้นคือ false
+
+  author    Author @relation(fields: [authorId], references: [id])
+  authorId  Int
+
+  categories Category[]                           // ความสัมพันธ์ Many-to-Many
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  name  String @unique                            // ชื่อห้ามซ้ำกัน (Unique)
+  books Book[]                                    // ความสัมพันธ์ Many-to-Many
+}

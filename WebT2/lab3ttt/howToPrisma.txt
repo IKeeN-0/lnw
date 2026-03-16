@@ -1,0 +1,29 @@
+ถ้าไม่มี package.json
+npm init -y
+
+เมื่อมีไฟล์ package.json
+npm install
+
+1. ติดตั้งตัวจัดการ (CLI) ของ Prisma เวอร์ชัน 5
+npm install prisma@5 --save-dev
+
+2. ติดตั้งพร้อมกับตัว CLI
+npm install @prisma/client@5
+
+3. สร้างโฟลเดอร์ prisma อัตโนมัติ
+npx prisma init
+
+ถ้าติด error *** สักอย่าง มาใช้
+npm install -g prisma
+
+prisma init
+
+4. จัดการไฟล์ .env แก้ไข DATABASE_URL
+5. จัดการไฟล์ schema.prisma ออกแบบตาราง (Model)
+
+6. สั่งให้ Prisma เอาแบบร่างที่เราเขียน ไปสร้างตารางในฐานข้อมูลจริง
+npx prisma migrate dev --name init
+
+
+ใช้สำหรับตรวจดูว่า db จริงเก็บไรหรือเป็นยังไง
+npx prisma studio
