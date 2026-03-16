@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WongNok</title>
+    <link rel="stylesheet" href="/frontend/style/nav.css" />
+    <link rel="stylesheet" href="/frontend/style/footer.css" />
+    <link rel="stylesheet" href="/frontend/style/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/frontend/resources/icon/icon.ico"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="main-nav-bar">
+      <div class="container">
+        <div class="nav-header">
+          <div class="nav-logo">
+            <img
+              src="/frontend/resources/logo/logo2.png"
+              alt="logo"
+              class="logo-image"
+            />
+          </div>
+
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <div class="sub-nav-bar" id="nav-menu">
+          <div class="nav-bar1">
+            <ul class="ul-navbar1">
+              <li><a href="/frontend/index.html">Home</a></li>
+
+              <li><a href="/frontend/pages/find.html">Search</a></li>
+
+              <li><a href="/frontend/pages/article.html">Article</a></li>
+
+              <li><a href="/frontend/pages/aboutus.html">About us</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-bar2">
+            <ul class="ul-navbar2">
+              <li><a href="#" id="open-signin">SignIn</a></li>
+              <li>|</li>
+              <li><a href="#" id="open-signup">SignUp</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="hero" class="main">
+      <div class="container">
+        <p>วันนี้คุณดื่มกาแฟแล้วหรือยัง?</p>
+
+        <div id="search-box" class="find">
+          <form class="hero__search" id="hero-search-form">
+            <input
+              type="text"
+              id="hero-search-input"
+              name="search"
+              placeholder="ค้นหารสชาติ"
+              aria-label="ค้นหากาแฟ"
+            />
+            <button
+              type="submit"
+              class="btn-primary"
+              onclick="window.location.href='#filters'"
+            >
+              ค้นหา
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div class="content">
+      <div class="container">
+        <div class="main-text">
+          <p>ค้นหาสไตล์กาแฟที่คุณหลงใหล</p>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn" data-key="roast" data-value="Dark">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">คั่วเข้ม</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="roast" data-value="Medium">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">คั่วกลาง</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="roast" data-value="Light">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">คั่วอ่อน</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="type" data-value="Specialty">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Specialty</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="flavor" data-value="Chocolate">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Chocolate</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="flavor" data-value="Fruity">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Fruity</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="process" data-value="Cold Brew">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Cold Brew</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="menu" data-value="Espresso">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Espresso</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="menu" data-value="Latte">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Latte</div>
+            </a>
+          </button>
+          <button class="filter-btn" data-key="menu" data-value="Non-Coffee">
+            <a href="#">
+              <div class="pic">
+                <img src="/frontend/resources/icon/coffee-cup.png" alt="icon" />
+              </div>
+              <div class="text">Non-Coffee</div>
+            </a>
+          </button>
+        </div>
+
+        <div class="main-text">
+          <p>ร้านกาแฟแนะนำสำหรับคุณ</p>
+        </div>
+
+        <div class="slider-wrapper">
+          <button class="nav-btn prev-btn" id="btn-prev-shop">&#10094;</button>
+
+          <div id="shop-suggestion" class="cards-container">
+            <p style="text-align: center; width: 100%; color: #888">
+              กำลังโหลดร้านแนะนำ...
+            </p>
+          </div>
+
+          <button class="nav-btn next-btn" id="btn-next-shop">&#10095;</button>
+        </div>
+
+        <div class="main-text article">
+          <p>บทความสุดฮิต</p>
+          <a href="/frontend/pages/article.html" class="more">ดูเพิ่มเติม ></a>
+        </div>
+
+        <div class="article-slider">
+          <button class="slider-btn prev" id="btn-prev-article" type="button">
+            &#10094;
+          </button>
+
+          <div class="article-suggestion" id="recommended-articles-container">
+            <p style="text-align: center; width: 100%; color: #888">
+              กำลังโหลดบทความแนะนำ...
+            </p>
+          </div>
+
+          <button class="slider-btn next" id="btn-next-article" type="button">
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main">
+      <div class="container">
+        <div class="logo-image">
+          <img src="/frontend/resources/logo/logo2.png" alt="Coffee Logo" />
+        </div>
+
+        <div class="navigator">
+          <ul class="nav-link">
+            <li>
+              <a href="/frontend/pages/aboutus.html" class="text-link"
+                >About us</a
+              >
+            </li>
+            <li><a href="#" class="text-link">Contact us</a></li>
+
+            <li class="separator"></li>
+
+            <li>
+              <a href="#" aria-label="Facebook">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Instagram">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path
+                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                  ></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Twitter/X">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Line">
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 16 16"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 0c4.411 0 8 2.912 8 6.492 0 1.48-.566 2.874-1.568 4.026.06.315.381 1.343.418 1.488.025.101.006.183-.027.247-.033.065-.091.107-.166.107-.061 0-.129-.015-.175-.027-.367-.094-1.698-.466-1.928-.535-.615.35-1.309.605-2.049.735l-.01.092-.495 2.802c-.15.845-.875 1.573-1.693 1.573H8c-4.411 0-8-2.912-8-6.492S3.589 0 8 0z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Youtube">
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  height="20"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"
+                  ></path>
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                  ></polygon>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="terms">
+          <p>Terms and Conditions | Return Policy</p>
+          <p>Privacy Policy | Cookie Policy</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/frontend/scripts/nav.js" defer></script>
+    <script type="module" src="/frontend/scripts/main.js" defer></script>
+    <script type="module" src="/frontend/scripts/pages/home.js" defer></script>
+    <script src="/frontend/scripts/article.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> -->
+  </body>
+</html>

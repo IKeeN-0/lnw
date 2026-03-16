@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>อ่านบทความ</title>
+    <link rel="stylesheet" href="/frontend/style/read.css" />
+    <link rel="stylesheet" href="/frontend/style/footer.css" />
+    <link rel="stylesheet" href="/frontend/style/nav.css" />
+  </head>
+  <body>
+    <header id="main-nav-bar">
+      <div class="container">
+        <div class="nav-header">
+          <div class="nav-logo">
+            <img
+              src="/frontend/resources/logo/logo2.png"
+              alt="logo"
+              class="logo-image"
+            />
+          </div>
+
+          <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+
+            <span class="bar"></span>
+          </button>
+        </div>
+
+        <div class="sub-nav-bar" id="nav-menu">
+          <div class="nav-bar1">
+            <ul class="ul-navbar1">
+              <li><a href="/frontend/index.html">Home</a></li>
+
+              <li><a href="/frontend/pages/find.html">Search</a></li>
+
+              <li><a href="/frontend/pages/article.html">Article</a></li>
+
+              <li><a href="/frontend/pages/aboutus.html">About us</a></li>
+            </ul>
+          </div>
+
+          <div class="nav-bar2">
+            <ul class="ul-navbar2"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="article-container">
+      <div class="content-wrapper">
+        <a href="/frontend/pages/article.html" class="back-btn"
+          >← กลับไปหน้ารวมบทความ</a
+        >
+
+        <header class="article-header">
+          <div class="article-meta">
+            <span id="article-tag" class="tag-badge">General</span>
+            <span id="article-date">Loading...</span>
+          </div>
+          <h1 id="article-title">กำลังโหลด...</h1>
+          <div class="author-info">
+            <img
+              src="/frontend/resources/avatar-placeholder.png"
+              alt="author"
+              class="author-avatar"
+            />
+            <div class="author-text">
+              <span id="article-author">Unknown Author</span>
+              <span id="article-views">0 views</span>
+            </div>
+          </div>
+        </header>
+
+        <div class="image-container">
+          <img id="article-cover" src="" alt="Cover Image" />
+        </div>
+
+        <article id="article-content" class="article-body"></article>
+
+        <hr class="divider" />
+
+        <section class="comment-section">
+          <h3>ความคิดเห็น (<span id="comment-count">0</span>)</h3>
+
+          <div class="comment-form-box">
+            <form id="comment-form">
+              <textarea
+                name="comment"
+                placeholder="แสดงความคิดเห็นของคุณ..."
+                rows="3"
+              ></textarea>
+              <div class="form-footer">
+                <span id="current-user-name">กรุณาเข้าสู่ระบบก่อนคอมเมนต์</span>
+                <button type="submit" class="btn-submit">ส่งคอมเมนต์</button>
+              </div>
+            </form>
+          </div>
+
+          <div id="comment-list">
+            <p class="loading-text">กำลังโหลดความคิดเห็น...</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="main"></footer>
+
+    <script type="module" src="/frontend/scripts/main.js"></script>
+    <script src="/frontend/scripts/nav.js"></script>
+    <script type="module" src="/frontend/scripts/pages/read.js"></script>
+  </body>
+</html>
