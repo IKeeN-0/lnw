@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkerLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="animation">
+            <div class="ball"></div>
+            <div class="play">Play</div>
+            <div class="stop">Stop</div>
+        </div>
+
+        <div class="test-area">
+            <h2>Find Fibonacci Number</h2>
+            <span>Enter N Number:</span>
+            <input id="input" class="input">
+            
+            <button id="noWorkerBtn" class="btn-no-worker">
+                Start Find N Fibonacci with NO Worker
+            </button>
+            <button id="workerBtn" class="btn-worker">
+                Start Find N Fibonacci with Dedicated Worker
+            </button>
+
+            <span id="result">Result: </span>
+            <div id="display" class="result"></div>    
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
